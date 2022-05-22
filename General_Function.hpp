@@ -34,7 +34,7 @@ const int KILL_BOSS_SCORE = 20 ;
 const int GET_BONUS_SCORE = 5 ;
 const int GET_BONUS_STAR_SCORE = 10 ;
 const int GET_INJURED_SCORE = -5 ;
-const int SCORE_WHICH_BOSS_SHOWN =  020 ;
+const int SCORE_WHICH_BOSS_SHOWN =  100 ;
 const int LIVES_PLUS_FOR_KILL_BOSS = 1;
 const int LIVES_PLUS_FOR_GET_STAR = 1 ;
 
