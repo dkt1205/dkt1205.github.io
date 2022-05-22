@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="game" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/game" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/game" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename=".gitignore" />
+		<Unit filename="BaseObject.cpp" />
+		<Unit filename="BaseObject.hpp" />
+		<Unit filename="BonusObject.cpp" />
+		<Unit filename="BonusObject.hpp" />
+		<Unit filename="BonusStarLife.png" />
+		<Unit filename="BossBullet.cpp" />
+		<Unit filename="BossBullet.hpp" />
+		<Unit filename="BossDeath.cpp" />
+		<Unit filename="BossDeath.hpp" />
+		<Unit filename="BossObject.cpp" />
+		<Unit filename="BossObject.hpp" />
+		<Unit filename="BulletObject.cpp" />
+		<Unit filename="BulletObject.hpp" />
+		<Unit filename="EnemyBullet.cpp" />
+		<Unit filename="EnemyBullet.hpp" />
+		<Unit filename="EnemyDeath.cpp" />
+		<Unit filename="EnemyDeath.hpp" />
+		<Unit filename="GameText.cpp" />
+		<Unit filename="GameText.hpp" />
+		<Unit filename="General_Function.cpp" />
+		<Unit filename="General_Function.hpp" />
+		<Unit filename="JosefinSans-SemiBold.ttf" />
+		<Unit filename="LTexture.cpp" />
+		<Unit filename="LTexture.hpp" />
+		<Unit filename="MainObject.cpp" />
+		<Unit filename="MainObject.hpp" />
+		<Unit filename="PlayForReal.mp3" />
+		<Unit filename="README.md" />
+		<Unit filename="SDL2.dll" />
+		<Unit filename="SDL2_image.dll" />
+		<Unit filename="SDL2_mixer.dll" />
+		<Unit filename="SDL2_ttf.dll" />
+		<Unit filename="ThreatObject.cpp" />
+		<Unit filename="ThreatObject.hpp" />
+		<Unit filename="aircraftSpriteSheet.png" />
+		<Unit filename="asphal8Deadmau.mp3" />
+		<Unit filename="bluebullet.png" />
+		<Unit filename="bonus1.png" />
+		<Unit filename="boss.png" />
+		<Unit filename="bossbullet.png" />
+		<Unit filename="bossdeath.png" />
+		<Unit filename="bullet.png" />
+		<Unit filename="bullet1.png" />
+		<Unit filename="bullet2.png" />
+		<Unit filename="enemySpriteSheet.png" />
+		<Unit filename="enemybullet.png" />
+		<Unit filename="enemydeath.png" />
+		<Unit filename="explosion.mp3" />
+		<Unit filename="game.cbp" />
+		<Unit filename="game.depend" />
+		<Unit filename="game.layout" />
+		<Unit filename="gameover.mp3" />
+		<Unit filename="gg1.png" />
+		<Unit filename="intro.png" />
+		<Unit filename="libFLAC-8.dll" />
+		<Unit filename="libjpeg-9.dll" />
+		<Unit filename="libmodplug-1.dll" />
+		<Unit filename="libmpg123-0.dll" />
+		<Unit filename="libogg-0.dll" />
+		<Unit filename="libopus-0.dll" />
+		<Unit filename="libopusfile-0.dll" />
+		<Unit filename="libpng16-16.dll" />
+		<Unit filename="libtiff-5.dll" />
+		<Unit filename="libvorbis-0.dll" />
+		<Unit filename="libvorbisfile-3.dll" />
+		<Unit filename="libwebp-7.dll" />
+		<Unit filename="m_background.mp3" />
+		<Unit filename="m_boss_death.wav" />
+		<Unit filename="m_deploy_missile.mp3" />
+		<Unit filename="m_enemybullet.wav" />
+		<Unit filename="m_enemydeath.wav" />
+		<Unit filename="m_get_item.mp3" />
+		<Unit filename="m_intro.mp3" />
+		<Unit filename="m_main_death.wav" />
+		<Unit filename="m_main_injured.wav" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mainDeath.png" />
+		<Unit filename="mainFunction.hpp" />
+		<Unit filename="main_injured.png" />
+		<Unit filename="perfectBK.png" />
+		<Unit filename="pinkbullet.png" />
+		<Unit filename="pressStoPlay.png" />
+		<Unit filename="success_elegant.mp3" />
+		<Unit filename="throughTheGatesAsphalt8AirborneOST.mp3" />
+		<Unit filename="zlib1.dll" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,123 @@
+# depslib dependency file v1.0
+1592025575 source:c:\users\administrator\desktop\game\baseobject.cpp
+	"BaseObject.hpp"
+
+1652873801 c:\users\administrator\desktop\game\baseobject.hpp
+	"General_Function.hpp"
+
+1653235082 c:\users\administrator\desktop\game\general_function.hpp
+	<Windows.h>
+	<string>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<iostream>
+	<vector>
+	<cmath>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"LTexture.hpp"
+
+1652288226 c:\users\administrator\desktop\game\ltexture.hpp
+	"General_Function.hpp"
+
+1652881224 source:c:\users\administrator\desktop\game\bonusobject.cpp
+	"BonusObject.hpp"
+
+1652795637 c:\users\administrator\desktop\game\bonusobject.hpp
+	"BaseObject.hpp"
+
+1653231627 source:c:\users\administrator\desktop\game\bossbullet.cpp
+	"BossBullet.hpp"
+
+1653035888 c:\users\administrator\desktop\game\bossbullet.hpp
+	"BaseObject.hpp"
+	"General_Function.hpp"
+
+1653234944 source:c:\users\administrator\desktop\game\bossdeath.cpp
+	"BossDeath.hpp"
+	"BossObject.hpp"
+
+1592025575 c:\users\administrator\desktop\game\bossdeath.hpp
+	"BaseObject.hpp"
+
+1653235262 c:\users\administrator\desktop\game\bossobject.hpp
+	"BaseObject.hpp"
+	"General_Function.hpp"
+	"BossBullet.hpp"
+	"MainObject.hpp"
+	"GameText.hpp"
+
+1653215263 c:\users\administrator\desktop\game\mainobject.hpp
+	"BaseObject.hpp"
+	"BulletObject.hpp"
+	<vector>
+
+1652761392 c:\users\administrator\desktop\game\bulletobject.hpp
+	"BaseObject.hpp"
+
+1652800641 c:\users\administrator\desktop\game\gametext.hpp
+	"BaseObject.hpp"
+	"General_Function.hpp"
+
+1653238124 source:c:\users\administrator\desktop\game\bossobject.cpp
+	"BossObject.hpp"
+
+1653231490 source:c:\users\administrator\desktop\game\bulletobject.cpp
+	"BulletObject.hpp"
+
+1653231552 source:c:\users\administrator\desktop\game\enemybullet.cpp
+	"EnemyBullet.hpp"
+
+1653113289 c:\users\administrator\desktop\game\enemybullet.hpp
+	"BaseObject.hpp"
+
+1653216814 source:c:\users\administrator\desktop\game\enemydeath.cpp
+	"EnemyDeath.hpp"
+
+1652761392 c:\users\administrator\desktop\game\enemydeath.hpp
+	"BaseObject.hpp"
+
+1652882922 source:c:\users\administrator\desktop\game\gametext.cpp
+	"GameText.hpp"
+
+1652932018 source:c:\users\administrator\desktop\game\general_function.cpp
+	"General_Function.hpp"
+
+1592025575 source:c:\users\administrator\desktop\game\ltexture.cpp
+	"LTexture.hpp"
+	"General_Function.hpp"
+
+1653052234 source:c:\users\administrator\desktop\game\main.cpp
+	"mainFunction.hpp"
+
+1653231552 c:\users\administrator\desktop\game\mainfunction.hpp
+	"General_Function.hpp"
+	"LTexture.hpp"
+	"MainObject.hpp"
+	"BulletObject.hpp"
+	"ThreatObject.hpp"
+	"EnemyBullet.hpp"
+	"EnemyDeath.hpp"
+	"BonusObject.hpp"
+	"BossObject.hpp"
+	"BossDeath.hpp"
+	"BossBullet.hpp"
+	"GameText.hpp"
+	<thread>
+	<chrono>
+
+1653112931 c:\users\administrator\desktop\game\threatobject.hpp
+	"BaseObject.hpp"
+	"MainObject.hpp"
+	"EnemyBullet.hpp"
+	"GameText.hpp"
+
+1653215263 source:c:\users\administrator\desktop\game\mainobject.cpp
+	"MainObject.hpp"
+
+1653231210 source:c:\users\administrator\desktop\game\threatobject.cpp
+	"ThreatObject.hpp"
+

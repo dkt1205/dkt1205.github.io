@@ -1,2 +1,9 @@
-# dkt1205.github.io
-BTL LTNC
+1. H??ng d?n cài ??t
+T?i các th? vi?n SDL và các th? vi?n m? r?ng
+T?i file t?i github ( trong file ?ã g?m file dll c?a các th? vi?n SDL,SDL Image, SDL Ttf,SDL Mixer )
+Cài ??t : thêm Linker settings -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
+Search directories: 
+- Complier ??n các ???ng d?n include\SDL2
+- Linker ??n các ???ng d?n lib
+2. Mô t? chung v? trò ch?i, các ý t??ng chính
+Trò ch?i ?i?u khi?n máy bay b?n các k? ??ch
