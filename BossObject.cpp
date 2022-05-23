@@ -2,7 +2,7 @@
 
 BossObject::BossObject(SDL_Renderer *ren)
 {
-    rect_.y = -BOSS_OBJECT_HEIGHT -5;
+    rect_.y = -BOSS_OBJECT_HEIGHT -2;
     rect_.x = SCREEN_WIDTH*15/100+ rand()% (SCREEN_WIDTH*7/10);
     rect_.w = BOSS_OBJECT_WIDTH;
     rect_.h = BOSS_OBJECT_HEIGHT;
@@ -101,7 +101,7 @@ BossObject::BossObject(SDL_Renderer *ren)
 }
 void BossObject::Fresh()
 {
-    SetRect( SCREEN_WIDTH*15/100+ rand()% (SCREEN_WIDTH*7/10), - BOSS_OBJECT_HEIGHT -5);
+    SetRect( SCREEN_WIDTH*15/100+ rand()% (SCREEN_WIDTH*7/10), - BOSS_OBJECT_HEIGHT -2);
     is_move = true;
     lives = BOSS_MAX_LIVES ;
     for (int i=0;i<6;i++)
@@ -116,9 +116,9 @@ void BossObject::GenerateBullet(SDL_Renderer* ren)
     {
         if (!p_bullet_list[i]->GetIsMove())
         {
-            if(rect_.y>=-BOSS_OBJECT_HEIGHT+2){
+            if(rect_.y>=-BOSS_OBJECT_HEIGHT+5){
             p_bullet_list[i]->SetIsMove(true);
-            p_bullet_list[i]->SetRect( rect_.x + BOSS_OBJECT_WIDTH/2-BOSS_BULLET_WIDTH/2 ,rect_.y + int(BOSS_OBJECT_HEIGHT*4/5)+3 ); //set vị trí khởi đầu đạn boss
+            p_bullet_list[i]->SetRect( rect_.x + BOSS_OBJECT_WIDTH/2-BOSS_BULLET_WIDTH/2 ,rect_.y + int(BOSS_OBJECT_HEIGHT*4/5)+17 ); //set vị trí khởi đầu đạn boss
             p_bullet_list[i]->ShowAnimation(ren);
             break;
             }
@@ -157,6 +157,7 @@ void BossObject::ControlBulletAndKillMainObject(int x, int y, SDL_Renderer* ren,
 void BossObject::HandleMove(const int x_border, const int y_border) {
     if ( rect_.y > y_border ) {
         is_move = false;
+        gofull=true;
         }
     rect_.y+= BOSS_OBJECT_HEIGHT/18;
     if(rand()%2==0) rect_.x-=BOSS_OBJECT_WIDTH/11;
