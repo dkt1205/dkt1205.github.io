@@ -40,12 +40,13 @@ void ThreatObject::GenerateBullet(SDL_Renderer* ren)
     else if(rand()%100>60) {type=2;}
     else type=0;
     enemy_bullet->SetBulletType(type);
-    p_bullet_list.push_back(enemy_bullet);
+    if(p_bullet_list.size()<=4) p_bullet_list.push_back(enemy_bullet); // giới hạn địch ra tối đa 5 đạn trong 1 khung hình
 }
 
 void ThreatObject::ControlBulletAndKillMainObject(int x, int y, SDL_Renderer* ren,
                                                   MainObject &main_object,Mix_Chunk* g_main_injured , GameText &Score)
 {
+
     for (int i=0;i <p_bullet_list.size();i++ ) {
         if (p_bullet_list[i]->GetIsMove())
         {
