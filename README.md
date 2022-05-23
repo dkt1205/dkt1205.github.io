@@ -17,7 +17,7 @@ Nếu để kẻ địch đi qua mà không bắn hạ thì sẽ bị trừ đi�
 Hiển thị điểm, mạng người chơi
 Kẻ địch xuất hiện và ra đạn ngẫu nhiên, đã giới hạn số lượng địch và đạn để có trải nghiệm chơi vừa phải nhất
 Khi người chơi hết mạng, có hiệu ứng báo kết thúc trò chơi
-Link youtube: 
+Link youtube: https://youtu.be/Oyyf2fFONfk
 </code></pre>
 <p class="has-line-data" data-line-start="22" data-line-end="23">»Các kỹ thuật lập trình được sử dụng trong chương trình</p>
 <pre><code>Thư viện SDL2.0, SDL2_image, SDL2_ttf, SDL2_mixer để render hình ảnh, âm thanh, font chữ
