@@ -7,7 +7,7 @@
 
 static double WIDTH_MAIN_OBJECT = 118;
 static double HEIGHT_MAIN_OBJECT = 151.1875;
-const int LIVES = 5 ;
+const int LIVES = 15 ;
 const int MAX_INJURED_TIMES = LIVES;
 
 class MainObject : public BaseObject
