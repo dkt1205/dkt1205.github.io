@@ -79,7 +79,7 @@ void ThreatObject::ControlBulletAndKillMainObject(int x, int y, SDL_Renderer* re
 void ThreatObject::HandleMove(const int x_border, const int y_border) {
     if ( rect_.y > y_border ) {
         is_move = false;
-        return ;
+        gofull=true;
     }
     int num = rand() % 5 ;
     switch(num)
