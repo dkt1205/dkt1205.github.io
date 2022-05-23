@@ -90,13 +90,18 @@ void InitIntroAndEnd(LTexture &intro, LTexture &pressS, LTexture &gModulatedText
     pressS.setColor(255,255,255);
 }
 
-void ShowThreatsList(vector<ThreatObject*> ThreatsList)
+void ShowThreatsList(vector<ThreatObject*> ThreatsList, GameText &Score, MainObject &MyAirPlane)
 {
     for(int i=0;i<ThreatsList.size();i++)
     {
         if (ThreatsList[i]->GetIsMove())
         {
             ThreatsList[i]->ShowAnimation(g_renderer);
+        }
+        if (ThreatsList[i]->Getgofull())
+        {
+            Score.IncreaseValue(-3) ;
+            MyAirPlane.IncreaseLives(-1);
         }
     }
 }
@@ -159,7 +164,7 @@ void MakeABoss(vector<BossObject*> &BossList,GameText &Score)
         if ( !BossList[i]->GetIsMove() )
             if (Score.GetValue()>= SCORE_WHICH_BOSS_SHOWN && rand()%50 == 1 ) {
                 Mix_PlayChannel(-1,g_boss_appear,0);
-                MAX_NUMBER_OF_ENEMY=12; // boss xuất hiện thì địch tăng
+                MAX_NUMBER_OF_ENEMY=10;
                 BossList[i]->Fresh();
                 break;
             }
@@ -167,11 +172,18 @@ void MakeABoss(vector<BossObject*> &BossList,GameText &Score)
     }
 };
 
-void ShowBossList(const vector<BossObject*> &BossList)
+void ShowBossList(const vector<BossObject*> &BossList,GameText &Score, MainObject &MyAirPlane)
 {
     for (int i=0;i<BossList.size();i++)
+    {
         if (BossList[i]->GetIsMove())
             BossList[i]->ShowAnimation(g_renderer);
+        if (BossList[i]->Getgofull())
+        {
+            Score.IncreaseValue(-5) ;
+            MyAirPlane.IncreaseLives(-1);
+        }
+    }
 }
 
 void ManageBossListWithMainOjectAndBossDeathList(vector<BossObject*> &BossList, MainObject &MyAirPlane,
@@ -352,10 +364,10 @@ void ManageBonusObjectList( vector<BonusObject*> &BonusObjectList, MainObject &M
 }
 void ShowBossListThreatsListBonusListBossDeathThreatsDeath( vector<BossObject*> BossList,vector<ThreatObject*> ThreatsList,
                                                             vector<BonusObject*> BonusObjectList,vector<BossDeath*> BossDeathList,
-                                                            vector<EnemyDeath*> EnemyDeathList)
+                                                            vector<EnemyDeath*> EnemyDeathList, GameText &Score, MainObject &MyAirPlane)
 {
-    ShowBossList(BossList);
-    ShowThreatsList(ThreatsList);
+    ShowBossList(BossList,Score,MyAirPlane);
+    ShowThreatsList(ThreatsList,Score,MyAirPlane);
     for (int i=0;i<BonusObjectList.size();i++)
     {
         if( BonusObjectList[i]->GetIsShown() ){
@@ -467,7 +479,7 @@ bool PlayGame(){
 
         if (MyAirPlane.GetLives()>0 ) {MyAirPlane.ShowAnimation(g_renderer);
         ShowBossListThreatsListBonusListBossDeathThreatsDeath(BossList,ThreatsList,
-                                                              BonusObjectList,BossDeathList,EnemyDeathList);
+                                                              BonusObjectList,BossDeathList,EnemyDeathList,Score,MyAirPlane);
         }
         PlayerLives.ShowNum2(gFont,textColor,g_renderer);
         Score.ShowNum(gFont,textColor,g_renderer) ;
@@ -502,7 +514,7 @@ bool PlayGame(){
         else  SDL_Delay(29);
 	}
 
-	// End Game Information : Showing Game Over 3 times and shut down Game
+	// End Game Information : Showing Game Over 2 times and shut down Game
     Mix_HaltChannel(-1);
     Mix_PlayChannel(-1, g_end_music ,0);
     int i=0,times=0;
