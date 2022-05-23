@@ -164,7 +164,7 @@ void MakeABoss(vector<BossObject*> &BossList,GameText &Score)
         if ( !BossList[i]->GetIsMove() )
             if (Score.GetValue()>= SCORE_WHICH_BOSS_SHOWN && rand()%50 == 1 ) {
                 Mix_PlayChannel(-1,g_boss_appear,0);
-                MAX_NUMBER_OF_ENEMY=10;
+                MAX_NUMBER_OF_ENEMY=8;
                 BossList[i]->Fresh();
                 break;
             }
