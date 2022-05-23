@@ -51,6 +51,7 @@ bool init()
             g_success_killboss=Mix_LoadWAV("success_killboss.mp3");
             g_boss_appear=Mix_LoadWAV("boss_appear.mp3");
             g_boss_death=Mix_LoadWAV("boss_death.mp3");
+
             if ( g_deploy_missile == NULL || g_enemy_death == NULL || g_main_injured == NULL || g_end_music== NULL || g_main_death==NULL || g_boss_appear==NULL || g_boss_death==NULL||
                 g_bk_music == NULL || g_get_item == NULL || g_success_get_item == NULL || g_through_gate == NULL ||g_bonus_boss==NULL ||g_success_killboss==NULL) {
                 cout << Mix_GetError() << endl;
@@ -158,11 +159,11 @@ void MakeABoss(vector<BossObject*> &BossList,GameText &Score)
         if ( !BossList[i]->GetIsMove() )
             if (Score.GetValue()>= SCORE_WHICH_BOSS_SHOWN && rand()%50 == 1 ) {
                 Mix_PlayChannel(-1,g_boss_appear,0);
-                MAX_NUMBER_OF_ENEMY=12;
+                MAX_NUMBER_OF_ENEMY=12; // boss xuất hiện thì địch tăng
                 BossList[i]->Fresh();
                 break;
             }
-            else MAX_NUMBER_OF_ENEMY=8;
+            else MAX_NUMBER_OF_ENEMY=6;
     }
 };
 
@@ -451,6 +452,7 @@ bool PlayGame(){
     is_quit = false;
     Mix_HaltChannel(-1);
     Mix_PlayChannel( -1,g_bk_music , 100 );
+
 	while (!is_quit)
     {
 		while (SDL_PollEvent(&g_even)) {
@@ -496,7 +498,7 @@ bool PlayGame(){
             ManageBossDeathListAndMakeBonus(BossDeathList,BonusObjectList);
         }
         if (MyAirPlane.GetLives()<=0)
-           SDL_Delay(94);
+           SDL_Delay(93);
         else  SDL_Delay(29);
 	}
 
@@ -522,6 +524,7 @@ bool PlayGame(){
             SDL_Delay(30);
             if(i==255)times++;
     };
+
 	SDL_General::CleanUp();
 	SDL_Quit();
 	return true;
