@@ -21,6 +21,7 @@ public:
     void ControlBulletAndKillMainObject(int x, int y,SDL_Renderer* ren, MainObject &main_object,
                                         Mix_Chunk* g_main_injured, GameText &Score );
     bool GetIsMove() {return is_move ;};
+    bool Getgofull() {return gofull;};
     void SetIsMove(bool x) { is_move = x ; } ;
 
     std::vector <BossBullet*> GetBulletList() { return p_bullet_list; };
@@ -30,7 +31,7 @@ public:
     int GetLives() {return lives ;};
     void Fresh();
 private:
-    bool is_move = 0;
+    bool is_move = 0,gofull=0;
     int lives = BOSS_MAX_LIVES ;
     vector <BossBullet*> p_bullet_list;
     SDL_Rect rectTexture[17];
