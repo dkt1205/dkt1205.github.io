@@ -40,7 +40,7 @@ void ThreatObject::GenerateBullet(SDL_Renderer* ren)
     else if(rand()%100>60) {type=2;}
     else type=0;
     enemy_bullet->SetBulletType(type);
-    if(p_bullet_list.size()<=4) p_bullet_list.push_back(enemy_bullet); // giới hạn địch ra tối đa 5 đạn trong 1 khung hình
+    if(p_bullet_list.size()<=2) p_bullet_list.push_back(enemy_bullet); // giới hạn địch ra tối đa 3 đạn trong 1 khung hình
 }
 
 void ThreatObject::ControlBulletAndKillMainObject(int x, int y, SDL_Renderer* ren,
