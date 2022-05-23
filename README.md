@@ -6,7 +6,7 @@ Chạy file game.cbp để chơi
 </code></pre>
 <p class="has-line-data" data-line-start="6" data-line-end="7">»Mô tả chung về trò chơi, các ý tưởng chính</p>
 <pre><code>Trò chơi điều khiển máy bay bắn hạ kẻ địch ( dùng các phím lên, xuống, phải, trái để di chuyển và space để bắn )
-Khởi đầu với 10 mạng ( mỗi lần trúng đạn -1 mạng, va chạm địch -1 mạng )
+Khởi đầu với 15 mạng ( mỗi lần trúng đạn -1 mạng, va chạm địch -1 mạng )
 Có 2 loại kẻ địch: địch thông thường và boss sẽ xuất hiện khi đạt 100 điểm
 Khi tiêu diệt được địch thông thường sẽ được tăng điểm và có tỉ lệ 90% rơi ra vật phẩm, ăn để tăng điểm giúp boss xuất hiện nhanh hơn
 Tiêu diệt boss , ăn vật phẩm khi tiêu diệt boss để tăng điểm và mạng
