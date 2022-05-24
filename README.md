@@ -33,7 +33,7 @@ Ngoài việc code, cần chọn lọc hình ảnh để game có đồ hoạ đ
 <p class="has-line-data" data-line-start="33" data-line-end="34">»Hướng phát triển</p>
 <pre><code>Thêm loại đạn với đường đi chéo
 Thêm chức năng tạm thời bất tử khi tiêu diệt được nhiều kẻ địch liên tiếp
-Thêm chế độ tua nhanh ở màn cuối bắt làm người chơi gần như không thể sống sót qua -&gt; kết thúc trò chơi sớm
+Thêm menu, chế độ tua nhanh ở màn cuối bắt làm người chơi gần như không thể sống sót qua -&gt; kết thúc trò chơi sớm
 Chơi lại nhiều lần, xếp hạng điểm các lần chơi ( Do phiên bản này em để có hiệu ứng màn hình kết thúc nên không làm )
 </code></pre>
 <p class="has-line-data" data-line-start="39" data-line-end="40">»Các điều tâm đắc rút ra được sau khi hoàn thiện chương trình</p>
